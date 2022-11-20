@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<style>
+  .content {
+    max-width: 500px;
+    margin: auto;
+  }
+</style>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/buttons" aria-label="Follow @buttons on GitHub"></a>
+
+<body>
+
+  <div class="content">
+    <html lang="en">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        top: 40px;
+        left: 40px;
+
+
+      }
+
+      .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+      }
+
+      .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .glow-on-hover:active {
+        color: #000
+      }
+
+      .glow-on-hover:active:after {
+        background: transparent;
+      }
+
+      .glow-on-hover:hover:before {
+        opacity: 1;
+      }
+
+      .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+
+        50% {
+          background-position: 400% 0;
+        }
+
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+    <button class="glow-on-hover" type="button" onclick=window.open('https://www.roblox.com')>HOVER ME, THEN CLICK
+      ME!</button>
+
+    <head>
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pure CSS Changing Words Animation</title>
+
+      <meta name="author" content="Codeconvey" />
+      <!-- Change Text Animation CSS -->
+      <link rel="stylesheet" href="css/style.css">
+      <!--Only for demo purpose - no need to add.-->
+      <link rel="stylesheet" href="css/demo.css" />
+
+    </head>
+
+    <body>
+
+      <div class="ScriptTop">
+        <div class="rt-container">
+          <div class="col-rt-4" id="float-right">
+
+            <!-- Ad Here -->
+
+          </div>
+          <div class="col-rt-2">
+            <ul>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <header class="ScriptHeader">
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="rt-heading">
+              <h1>you have a right to</h1>
+              <p>To privacy<b> But</b></p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="rt-container">
+          <div class="col-rt-12">
+            <div class="Scriptcontent">
+
+
+              <div class="container">
+                <div class="word w1">Are Your Passwords Safe?</div>
+                <div class="word w2">*** **** ********* **** *</div>
+                <div class="word w3">they are now</div>
+                <div class="word w4">.... ... ...</div>
+
+              </div>
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Analytics -->
+
+    </body>
+
+    </html>
+    <html>
+
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Random Password Generator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A webpage that generates random passwords">
+      <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </head>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <body>
+      <h1 id="title">Random Password Generator</h1>
+      <div id="wrapper">
+        <aside id="sidebar">
+          <div id="instructions">
+            <div id="instructions__header">
+              <h4 id="how">How To Use:</h4>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <div id="instructions__content">
+              <ul>
+                <li>Type in password length.</li>
+                <li>Select type of password required by checking the appropriate boxes.<br>(Only select 'Include
+                  numbers'
+                  to
+                  generate a PIN number)</li>
+                <li>Click 'Generate password'</li>
+              </ul>
+              <p>All passwords are generated on your browser, so nothing is stored online.</p>
+              <p>You're the only one who has knowledge of the generated password.</p>
+            </div>
+          </div>
+        </aside>
+        <main>
+          <div id="random-password-container">
+            <div id="error-message"></div>
+            <div class="input-container">
+              <label for="password-length">Length of password: </label>
+              <input type="number" value="8" min="4" max="256" maxlength="3" id="password-length" step="1"
+                onkeyup="this.value = minmax(this.value, getMin(), getMax())">
+            </div>
+            <div class="input-container">
+              <label for="repeat-characters">Repeat characters</label>
+              <input type="checkbox" checked id="repeat-characters">
+            </div>
+            <div class="input-container">
+              <label for="special-characters">Use special characters</label>
+              <input type="checkbox" checked id="special-characters">
+            </div>
+            <div class="input-container">
+              <label for="ambiguous-characters">Include ambiguous characters ("l, I, 1, 0, o")</label>
+              <input type="checkbox" checked id="ambiguous-characters">
+            </div>
+            <div class="input-container">
+              <label for="include-numbers">Include numbers</label>
+              <input type="checkbox" checked id="include-numbers">
+            </div>
+            <div class="input-container">
+              <label for="include-letters">Include letters</label>
+              <input type="checkbox" checked id="include-letters">
+            </div>
+            <button class="generate button" type="button" onclick="generatePassword()">Generate password</button>
+            <div class="input-container">
+              Random password:
+              <div id="random-password"></div>
+            </div>
+            <button class="copy button" type="button" onClick="copyToClip()"> Copy to Clipboard </button>
+          </div>
+          <div id="password-strength-container">
+            <div class="input-container">
+              <input type="password" id="password-test" placeholder="Type password here"><span
+                id="password-toggle">show</span>
+              <div id="password-indicator"></div>
+              <div id="password-strength-text">
+                Password strength: <span id="password-strength"></span>
+              </div>
+            </div>
+            <!--                <button class="strengthen button" type ="button" onClick="strengthenPassword()"> Strengthen Password </button>-->
+          </div>
+        </main>
+      </div>
+    </body>
+    <script src="index.js"></script>
+
+    </html>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #1e272e;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+      }
+
+
+      #title {
+        font-size: 28px;
+        color: red;
+        border: 3px solid lightslategray;
+        padding: .2em;
+        border-radius: 5px;
+        background-color: black;
+        text-align: center;
+        margin-top: 0;
+      }
+
+      #wrapper {
+        position: relative;
+      }
+
+      aside {
+        width: 33.5%;
+        position: absolute;
+        height: 85vh;
+        right: 0;
+      }
+
+      #instructions {
+        border: 2px solid gray;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        color: #2f3542;
+        background-color: #f1f2f6;
+        max-height: 55px;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out
+      }
+
+      #instructions.active {
+        height: auto;
+        max-height: 500px;
+      }
+
+      #instructions__header {
+        padding: 1em;
+        cursor: pointer;
+        border-bottom: 1px solid #2f3542;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #instructions__content {
+        padding: 0 2em 1em 2em;
+      }
+
+      #instructions__content ul {
+        padding: 0;
+      }
+
+      #how {
+        margin: 0;
+      }
+
+      #instructions li {
+        margin-bottom: 1em
+      }
+
+      main {
+        width: 65%;
+      }
+
+      main div {
+        margin: 0.5em 0;
+      }
+
+      #password-length {
+        width: 5em;
+        padding: .2rem;
+        text-align: center;
+        font-size: .8em;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .button {
+        font-size: 1rem;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+      }
+
+      .button.generate {
+        background-color: #70A1FF;
+        color: #fff;
+      }
+
+      .button.generate:hover {
+        background-color: #91b6fb;
+      }
+
+      .button.copy {
+        background-color: powderblue;
+        color: black;
+      }
+
+      .button.copy:hover {
+        background-color: #b6e4eb;
+      }
+
+      #random-password-container {
+        border: 2px solid gray;
+        border-radius: 5px;
+        background-color: #dfe4ea;
+        padding: 1em;
+      }
+
+      #random-password {
+        background-color: powderblue;
+        padding: 1em;
+        word-break: break-all;
+      }
+
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+
+      #error-message {
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        color: #D8000C;
+      }
+
+      #password-strength-container {
+        border: 2px solid gray;
+        border-radius: 5px;
+        background-color: #dfe4ea;
+        padding: 1em;
+      }
+
+      #password-strength-container .input-container {
+        position: relative;
+      }
+
+      #password-test {
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid gray;
+        padding: 0.5em;
+        outline: none;
+      }
+
+      #password-indicator {
+        width: 100%;
+        padding: 2px;
+        border-radius: 5px;
+        background: white;
+      }
+
+      #password-indicator.weak {
+        background: linear-gradient(to right, #ff0000 25%, #fff 25%);
+      }
+
+      #password-indicator.average {
+        background: linear-gradient(to right, #ff9900 50%, #fff 50%);
+      }
+
+      #password-indicator.good {
+        background: linear-gradient(to right, #70A1FF 75%, #fff 75%);
+      }
+
+      #password-indicator.strong {
+        background: linear-gradient(to right, #43f04c 100%, #43f04c 100%);
+      }
+
+      #password-toggle {
+        font-size: .8em;
+        float: right;
+        position: absolute;
+        right: 0.5em;
+        top: 0.75em;
+        color: #70A1FF;
+        cursor: pointer;
+      }
+
+      @keyframes octocat-wave {
+
+        0%,
+        100% {
+          transform: rotate(0)
+        }
+
+        20%,
+        60% {
+          transform: rotate(-25deg)
+        }
+
+        40%,
+        80% {
+          transform: rotate(10deg)
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0
+        }
+
+        to {
+          opacity: 1
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        aside {
+          position: relative;
+          height: auto;
+          width: 100%;
+        }
+
+        main {
+          width: 100%;
+        }
+      }
+    </style>
+    <script>function minmax(value, min, max) {
+        if (value.indexOf('.') > -1) {
+          if (value === ".") return; //We're only interested in whole numbers, so we'll disallow this.  A dot can't be in the first position.
+          return value.split('.')[0];
+        }
+        if (value.length < 2) return value; //We can't yet be sure the number is less than min.
+
+        const parsedInput = parseInt(value);
+
+        if (parsedInput >= min && parsedInput <= max)
+          return value;
+        else if (parsedInput < min)
+          return min;
+
+        else if (parsedInput > max)
+          return max;
+        return value;
+      }
+
+      var passwordLength = document.getElementById("password-length");
+      var repeatCharacters = document.getElementById("repeat-characters");
+      var specialCharacters = document.getElementById("special-characters");
+      var ambiguousCharacters = document.getElementById("ambiguous-characters");
+      var includeNumbers = document.getElementById("include-numbers");
+      var includeLetters = document.getElementById("include-letters");
+      var randomPassword = document.getElementById("random-password");
+      var errorMessage = document.getElementById("error-message");
+
+      var defaultCharacters = ["@", "!", "#", "$", "?", ".", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      var characters = [];
+      var passwordArray = [];
+
+      const MIN = 4;
+      const MAX = 256;
+
+      function generatePassword() {
+        randomPassword.innerHTML = "";
+        passwordArray = [];
+        characters = defaultCharacters;
+        const pwLength = parseInt(passwordLength.value);
+
+        if (!specialCharacters.checked) {
+          characters = characters.join("").replace(/[@!#$?.]/g, '').split('')
+        }
+        if (!includeNumbers.checked) {
+          characters = characters.join("").replace(/[0-9]/g, '').split('')
+        }
+        if (!includeLetters.checked) {
+          characters = characters.join("").replace(/[a-zA-Z]/g, '').split('')
+        }
+        if (!ambiguousCharacters.checked) {
+          characters = characters.join("").replace(/[1Ilo0]/g, '').split('')
+        }
+
+        if (pwLength < MIN || pwLength > MAX) {//Final validation in case something is wrong.
+          errorMessage.innerHTML = "You must pick a password between " + MIN + " and " + MAX;
+          return;
+        }
+
+
+        if (!specialCharacters.checked && !includeNumbers.checked && !includeLetters.checked) {
+          errorMessage.innerHTML = "Alas, blank passwords aren't a thing yet."
+          return;
+        }
+        if (!repeatCharacters.checked) {
+          if (passwordLength.value > characters.length) {
+            errorMessage.innerHTML = "There are only so many characters, we're going to have to repeat something"
+            return;
+          } else {
+            errorMessage.innerHTML = ""
+            while (passwordArray.length < passwordLength.value) {
+              var randomIndex = Math.floor(Math.random() * characters.length);
+              var newChar = characters[randomIndex];
+              newChar = isNaN(newChar) ? newChar.toLowerCase() : newChar;
+              if (passwordArray.indexOf(newChar) === -1) {
+                passwordArray.push(characters[randomIndex]);
+              }
+            }
+          }
+        } else {
+          errorMessage.innerHTML = ""
+          for (var i = 0; i < passwordLength.value; i++) {
+            var randomIndex = Math.floor(Math.random() * characters.length);
+            passwordArray.push(characters[randomIndex])
+          }
+        }
+        randomPassword.innerHTML = passwordArray.join("");
+      }
+
+      //function copies the created password to clipboard
+      function copyToClip() {
+        var value = document.getElementById("random-password").innerHTML;
+        var input_temp = document.createElement("input");
+        input_temp.value = value;
+        document.body.appendChild(input_temp);
+        input_temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(input_temp);
+
+        alert("Password copied!");
+      }
+
+      function getMin() {return MIN;}
+      function getMax() {return MAX;}
+
+      // TOOGLE HOW TO USE
+      let openInstructions = document.getElementById('instructions__header');
+      let arrow = document.querySelector('.fas');
+
+      openInstructions.addEventListener('click', () => {
+        openInstructions.parentNode.classList.contains('active') ?
+          (openInstructions.parentNode.classList.remove('active'), arrow.classList.remove('fa-angle-up'), arrow.classList.add('fa-angle-down')) :
+          (openInstructions.parentNode.classList.add('active'), arrow.classList.remove('fa-angle-down'), arrow.classList.add('fa-angle-up'))
+      });
+
+      var passwordTest = document.getElementById("password-test");
+      passwordTest.addEventListener("change", indicator);
+
+      function passwordScore() {
+        var value = passwordTest.value.trim();
+        var score = 0;
+        if (value.length < 8) {
+          score = 0;
+        } else {
+          if (value.length > 8) {
+            score++
+          }
+          if (/\d/.test(value)) {
+            score++
+          }
+          if (/[!@#$%^&*()_+\-=\[\]{};':"\|\,.<>\?]/.test(value)) {
+            score++
+          }
+          if (/[A-Z]/.test(value)) {
+            score++
+          }
+          if (value.length > 24) {
+            score++
+          }
+        }
+        return score;
+      }
+
+      var passwordIndicator = document.getElementById("password-indicator");
+      var passwordStrength = document.getElementById("password-strength");
+
+      function indicator() {
+        if (passwordTest.value.trim().length < 1) {
+          passwordIndicator.className = "";
+          passwordStrength.innerHTML = "";
+        } else {
+          var score = passwordScore();
+          switch (score) {
+            case 0:
+              passwordIndicator.className = "weak";
+              passwordStrength.innerHTML = "Weak";
+              break;
+            case 1:
+              passwordIndicator.className = "average";
+              passwordStrength.innerHTML = "Average";
+              break;
+            case 2:
+              passwordIndicator.className = "good";
+              passwordStrength.innerHTML = "Good";
+              break;
+            case 3:
+              passwordIndicator.className = "strong";
+              passwordStrength.innerHTML = "Strong";
+              break;
+            case 4:
+              passwordIndicator.className = "strong";
+              passwordStrength.innerHTML = "Strong";
+              break;
+            default:
+              passwordIndicator.className = "";
+              passwordStrength.innerHTML = "";
+              break;
+          }
+        }
+      }
+
+      passwordTest.onkeyup = function () {
+        indicator();
+      }
+
+      var passwordToggle = document.getElementById("password-toggle");
+
+      function togglePassword() {
+        if (passwordTest.value.trim().length < 1) {
+          return
+        } else {
+          if (passwordTest.type === "text") {
+            passwordToggle.innerHTML = "show";
+            passwordTest.type = "password";
+          } else if (passwordTest.type === "password") {
+            passwordToggle.innerHTML = "hide";
+            passwordTest.type = "text";
+          }
+        }
+      }
+
+      passwordToggle.onclick = function () {
+        togglePassword();
+      }
+
+//function strengthenPassword() {
+//    var value = passwordTest.value.trim();
+//} </script>
+  </div>
+
+</body>
